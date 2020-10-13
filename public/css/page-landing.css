@@ -10,11 +10,34 @@
 #container {
     margin: auto;
 
-    width: 90%;
+    width: min(90%, 112rem);
 }
 
+/*agrupamento das coisas*/
 .location, h1, .visit p {
     height: 16vh;
+}
+
+/* tempo de animação do elemento*/
+#logo {
+    animation-delay: 50ms;
+}
+
+/* tempo de animação do elemento*/
+.location {
+    animation-delay: 100ms;
+}
+
+/* tempo de animação do elemento*/
+main h1 {
+    animation-delay: 150ms;
+    /*adequação da fonte de acordo o dispositivo*/
+    font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+/* tempo de animação do elemento*/
+.visit p {
+    animation-delay: 200ms;
 }
 
 .visit a {
@@ -31,29 +54,55 @@
     margin: auto;
 
     transition: background 200ms;
+
+    /* tempo de animação do elemento*/
+    animation-delay: 250ms;
 }
 
 .visit a:hover {
     background: #96feff;
 }
 
-/* tempo de animação de cada elemento*/
-#logo {
-    animation-delay: 50ms;
-}
+/*Desktop version*/
+@media (min-width: 760px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.location {
-    animation-delay: 100ms;
-}
+    .location, h1, .visit p {
+        height: initial;
+        text-align: initial;
+    }
 
-main h1 {
-    animation-delay: 150ms;
-}
+    .location {
+        text-align: right;
+        font-size: 2.0rem;/*2.4*/
+        line-height: 1.5;
+    }
 
-.visit p {
-    animation-delay: 200ms;
-}
+    main h1 {
+        font-weight: bold;
+        line-height: .88;
 
-.visit a {
-    animation-delay: 250ms;
+        margin: clamp(10%, 9vh, 12%) 0 4rem;
+        width: min(300px, 80%);
+    }
+
+    .visit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .visit p {
+        font-size: 2.0rem;/*2.4*/
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+    }
+
+    .visit a {
+        margin: initial;
+    }
 }
