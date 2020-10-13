@@ -1,4 +1,6 @@
-/*animações*/
+/*animações
+
+index.html*/
 @keyframes up {
     from {
         opacity: 0;
@@ -11,8 +13,24 @@
     }
 }
 
+/*orphanages.html*/
+@keyframes right {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+} 
+
 .animate-up {
     animation-name: up;
     animation-duration: 300ms;
     animation-fill-mode: backwards;
+}
+
+.animate-right {
+    animation-name: right;
+    animation-duration: 300ms;
 }
