@@ -34,6 +34,8 @@ aside footer p {
 #mapid {
     width: 100%;
     height: 100%;
+
+    animation-delay: 200ms;
 }
 
 /* Button */
@@ -41,6 +43,8 @@ a.create-orphanages {
     position: absolute;
     right: 4rem;
     bottom: 4rem;
+
+    z-index: 10;
 
     width: 6.4rem;
     height: 6.4rem;
@@ -57,4 +61,8 @@ a.create-orphanages {
 
 a.create-orphanages:hover {
     background: #17d6eb;
+}
+
+/*layou do popup*/
+.leaflet-popup-content-wrapper {
 }
