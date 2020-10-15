@@ -57,7 +57,6 @@ function addPhotoField(){
 }
 
 //remover container
-
 function deleteField(event) {
     const span = event.currentTarget
 
@@ -71,4 +70,23 @@ function deleteField(event) {
 
     //deletar o campo
     span.parentNode.remove();
+}
+
+//seleção do sim ou não
+function toggleSelect(event) {
+    //retirar a class .active dos botões
+    document.querySelectorAll('.button-select button')
+    .forEach(function(button) {
+        button.classList.remove('active')
+    })
+
+    //colocar a class .active nesse botão
+    const button = event.currentTarget
+    button.classList.add('active')
+
+    //atualizar o input hidden com o valor selecionado
+    const input = document.querySelector('[name="open_on_weekends"]')
+
+    //verificar se sim ou não
+    input.value = button.dataset.value
 }
