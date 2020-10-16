@@ -4,7 +4,7 @@
 // cd ../ - voltar a pasta de origem
 
 //importar dependencias
-// const { response } = require('express')
+const { response } = require('express')
 const express = require('express')
 const path = require('path')
 const pages = require('./pages.js')
